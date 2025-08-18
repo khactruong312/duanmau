@@ -13,7 +13,7 @@
             background-position: center;
             margin-bottom: 30px;
         }
-        .product-card {
+        .product-card { 
             transition: transform 0.3s;
             margin-bottom: 20px;
         }
@@ -58,10 +58,10 @@
                     </ul>
                     <div class="d-flex">
                         <?php if (isset($_SESSION['user'])): ?>
-                            <div class="dropdown">
+                            <div class="dropdown">  
                                 <button class="btn btn-outline-light dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
                                     <i class="fas fa-user"></i> <?= $_SESSION['user']['fullname'] ?>
-                                </button>
+                                </button>   
                                 <ul class="dropdown-menu dropdown-menu-end">
                                     <?php if ($_SESSION['user']['role'] === 'admin'): ?>
                                         <li><a class="dropdown-item" href="index.php?act=admin">Quản trị</a></li>

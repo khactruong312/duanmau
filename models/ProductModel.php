@@ -61,15 +61,15 @@ class ProductModel
 
     
     // Cập nhật sản phẩm
-    public function updateProduct($id, $name, $price, $description, $image, $category_id, $quantity, $discount = 0, $detail = '')
-    {
-        $sql = "UPDATE products 
-                SET name = ?, price = ?, description = ?, image = ?, 
-                    category_id = ?, quantity = ?, discount = ?, detail = ? 
-                WHERE id = ?";
-        $stmt = $this->conn->prepare($sql);
-        return $stmt->execute([$name, $price, $description, $image, $category_id, $quantity, $discount, $detail, $id]);
-    }
+ public function updateProduct($id, $name, $price, $description, $image, $category_id, $discount) {
+    $sql = "UPDATE products 
+            SET name=?, price=?, description=?, image=?, category_id=?, discount=? 
+            WHERE id=?";
+    $stmt = $this->conn->prepare($sql);
+    return $stmt->execute([$name, $price, $description, $image, $category_id, $discount, $id]);
+}
+
+
     
     // Xóa sản phẩm
     public function deleteProduct($id)

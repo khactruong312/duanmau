@@ -47,7 +47,7 @@ $users = $users ?? [];
     </div>
     <?php endif; ?>
 
-    <!-- DataTales Example -->
+
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Danh sách người dùng</h6>
@@ -102,9 +102,7 @@ $users = $users ?? [];
     </div>
 
 </div>
-<!-- /.container-fluid -->
 
-<!-- Add User Modal -->
 <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -161,7 +159,6 @@ $users = $users ?? [];
     </div>
 </div>
 
-<!-- Edit User Modal -->
 <?php if ($user_edit): ?>
 <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -223,14 +220,6 @@ $users = $users ?? [];
         </div>
     </div>
 </div>
-
-<script>
-    // Hiển thị modal chỉnh sửa khi trang được tải
-    document.addEventListener('DOMContentLoaded', function() {
-        var editUserModal = new bootstrap.Modal(document.getElementById('editUserModal'));
-        editUserModal.show();
-    });
-</script>
 <?php endif; ?>
 
 <?php include_once 'layout/footer_admin.php'; ?>
@@ -239,10 +228,3 @@ $users = $users ?? [];
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 
-<!-- Page level custom scripts -->
-<script>
-    // Call the dataTables jQuery plugin
-    $(document).ready(function() {
-        $('#dataTable').DataTable();
-    });
-</script>

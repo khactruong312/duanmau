@@ -108,7 +108,7 @@ class AdminController {
             
             if ($result) {
                 $_SESSION['success'] = 'Thêm sản phẩm thành công!';
-            } else {
+               } else {
                 $_SESSION['error'] = 'Thêm sản phẩm thất bại!';
             }
             
@@ -328,6 +328,19 @@ class AdminController {
         // Lấy danh sách người dùng
         $users = $this->adminModel->getAllUsers();
         
+        // Kiểm tra nếu có id người dùng cần sửa
+        $user_edit = null;
+        if (isset($_GET['id'])) {
+            // Lấy thông tin người dùng theo id
+            $user_edit = $this->adminModel->getUserById($_GET['id']);
+            
+            if (!$user_edit) {
+                $_SESSION['error'] = 'Không tìm thấy người dùng!';
+                header('Location: index.php?act=admin_users');
+                exit;
+            }
+        }
+        
         // Hiển thị view
         include 'views/admin/users.php';
     }
@@ -365,10 +378,10 @@ class AdminController {
             
             // Cập nhật thông tin người dùng
             if (!empty($password)) {
-                // Nếu có mật khẩu mới, cập nhật cả mật khẩu
+                
                 $result = $this->adminModel->updateUserWithPassword($id, $username, $fullname, $email, $phone, $address, $role, $password);
             } else {
-                // Nếu không có mật khẩu mới, chỉ cập nhật thông tin
+        
                 $result = $this->adminModel->updateUser($id, $username, $fullname, $email, $phone, $address, $role);
             }
             

@@ -60,7 +60,7 @@ require_once 'layout/header.php';
                                 <a href="index.php?act=detail&id=<?= $product['id'] ?>" class="btn btn-sm btn-primary">Chi tiết</a>
                             </div>
                         </div>
-                    </div>
+                    </div>  
                 </div>
                 <?php endforeach; ?>
             </div>

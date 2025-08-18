@@ -110,6 +110,4 @@ class UserModel
         $stmt = $this->conn->prepare($sql);
         return $stmt->execute([$fullname, $email, $phone, $address, $hashed_password, $id]);
     }
-
-
 }

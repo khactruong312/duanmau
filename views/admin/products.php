@@ -23,10 +23,8 @@ $products = $products ?? [];
 
 <?php include_once 'layout/header_admin.php'; ?>
 
-<!-- Begin Page Content -->
-<div class="container-fluid">
 
-    <!-- Page Heading -->
+<div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Quản lý sản phẩm</h1>
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal">
@@ -101,9 +99,7 @@ $products = $products ?? [];
     </div>
 
 </div>
-<!-- /.container-fluid -->
 
-<!-- Add Product Modal -->
 <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -165,8 +161,6 @@ $products = $products ?? [];
         </div>
     </div>
 </div>
-
-<!-- Edit Product Modal -->
 <?php if ($product_edit): ?>
 <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -240,26 +234,9 @@ $products = $products ?? [];
         </div>
     </div>
 </div>
-
-<script>
-    // Hiển thị modal chỉnh sửa khi trang được tải
-    document.addEventListener('DOMContentLoaded', function() {
-        var editProductModal = new bootstrap.Modal(document.getElementById('editProductModal'));
-        editProductModal.show();
-    });
-</script>
 <?php endif; ?>
 
 <?php include_once 'layout/footer_admin.php'; ?>
 
-<!-- Page level plugins -->
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
-
-<!-- Page level custom scripts -->
-<script>
-    // Call the dataTables jQuery plugin
-    $(document).ready(function() {
-        $('#dataTable').DataTable();
-    });
-</script>

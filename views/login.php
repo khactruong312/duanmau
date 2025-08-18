@@ -1,5 +1,4 @@
 <?php
-// Include header
 require_once 'layout/header.php';
 ?>
 
@@ -28,14 +27,14 @@ require_once 'layout/header.php';
                             <label for="username" class="form-label">Tên đăng nhập</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                <input type="text" class="form-control" id="username" name="username" required>
+                            <input type="text" class="form-control" id="username" name="username" required>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Mật khẩu</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                                <input type="password" class="form-control" id="password" name="password" required>
+                            <input type="password" class="form-control" id="password" name="password" required>
                                 <button class="btn btn-outline-secondary" type="button" id="togglePassword">
                                     <i class="fas fa-eye"></i>
                                 </button>
@@ -57,6 +56,5 @@ require_once 'layout/header.php';
 
 
 <?php
-// Include footer
 require_once 'layout/footer.php';
 ?>

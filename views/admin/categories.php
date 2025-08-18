@@ -136,13 +136,6 @@ $categories = $categories ?? [];
     </div>
 </div>
 
-<script>
-    // Hiển thị modal chỉnh sửa khi trang được tải
-    document.addEventListener('DOMContentLoaded', function() {
-        var editCategoryModal = new bootstrap.Modal(document.getElementById('editCategoryModal'));
-        editCategoryModal.show();
-    });
-</script>
 <?php endif; ?>
 
 <?php include_once 'layout/footer_admin.php'; ?>
@@ -150,11 +143,3 @@ $categories = $categories ?? [];
 <!-- Page level plugins -->
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
-
-<!-- Page level custom scripts -->
-<script>
-    // Call the dataTables jQuery plugin
-    $(document).ready(function() {
-        $('#dataTable').DataTable();
-    });
-</script>
