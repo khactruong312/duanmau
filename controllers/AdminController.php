@@ -67,7 +67,7 @@ class AdminController {
     // Thêm sản phẩm mới
     public function AddProduct() {
         $this->checkAdminAccess();
-        
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $name = $_POST['name'] ?? '';
             $price = $_POST['price'] ?? 0;
@@ -325,13 +325,9 @@ class AdminController {
     public function ManageUsers() {
         $this->checkAdminAccess();
         
-        // Lấy danh sách người dùng
         $users = $this->adminModel->getAllUsers();
-        
-        // Kiểm tra nếu có id người dùng cần sửa
         $user_edit = null;
         if (isset($_GET['id'])) {
-            // Lấy thông tin người dùng theo id
             $user_edit = $this->adminModel->getUserById($_GET['id']);
             
             if (!$user_edit) {

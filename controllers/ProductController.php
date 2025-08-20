@@ -68,13 +68,8 @@ class ProductController
     
     public function AllProducts()
     {
-        // Lấy danh sách sản phẩm
         $products = $this->modelProduct->getAllProducts();
-        
-        // Lấy danh sách danh mục
         $categories = $this->modelProduct->getAllCategories();
-        
-        // Hiển thị view
         require_once './views/products.php';
     }
 }

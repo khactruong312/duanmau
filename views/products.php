@@ -1,5 +1,4 @@
 <?php
-// Lấy dữ liệu từ controller
 $products = $products ?? [];
 $categories = $categories ?? [];
 
